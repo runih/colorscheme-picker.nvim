@@ -39,8 +39,10 @@ return {
 | Mappings      | Action                                         |
 | ------------- | ---------------------------------------------- |
 | `<C-j>/<C-k>` | Next/previous                                  |
+| `<C-a>`       | Apply colorscheme                              |
 | `<Tab>`       | Next colorscheme and apply the colorscheme     |
 | `<S-Tab>`     | Previous colorscheme and apply the colorscheme |
+| `<C-b>`       | Toggle background between light and dark       |
 
 ### Normal Mode
 
@@ -55,6 +57,7 @@ return {
 | `T`       | Decrease transparency (NeoVide)                |
 | `<Tab>`   | Next colorscheme and apply the colorscheme     |
 | `<S-Tab>` | Previous colorscheme and apply the colorscheme |
+| `b`       | Toggle background between light and dark       |
 | `S`       | Save Default colorscheme                       |
 
 ## Default colorscheme file
