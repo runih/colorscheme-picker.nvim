@@ -18,7 +18,6 @@ return {
   dependencies = {
     "nvim-telescope/telescope.nvim",
   },
-  dev = true,
   config = function()
     local ok, colorscheme = pcall(require, "colorscheme-picker")
     if not ok then
