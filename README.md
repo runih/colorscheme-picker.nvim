@@ -55,3 +55,8 @@ return {
 | `t`       | Increase transparency                          |
 | `<Tab>`   | Next colorscheme and apply the colorscheme     |
 | `<S-Tab>` | Previous colorscheme and apply the colorscheme |
+| `S`       | Save Default colorscheme                       |
+
+## Default colorscheme file
+
+Saved colorscheme will be stored in the file `~/.config/nvim/colorscheme`.
