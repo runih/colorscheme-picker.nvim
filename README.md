@@ -51,7 +51,8 @@ return {
 | `gg/G`    | Select the first/last item                     |
 | `<CR>`    | Confirm selection                              |
 | `a`       | Apply colorscheme                              |
-| `t`       | Increase transparency                          |
+| `t`       | Increase transparency (NeoVide)                |
+| `T`       | Decrease transparency (NeoVide)                |
 | `<Tab>`   | Next colorscheme and apply the colorscheme     |
 | `<S-Tab>` | Previous colorscheme and apply the colorscheme |
 | `S`       | Save Default colorscheme                       |
