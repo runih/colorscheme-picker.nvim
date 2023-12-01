@@ -27,6 +27,7 @@ return {
     colorscheme.setup({
       default_colorscheme = "bamboo",
       keymapping = "<leader>cs",
+      default_colorscheme_keymapping = "<leader>CD"
     })
     colorscheme.set_default_colorscheme()
   end,
@@ -35,7 +36,10 @@ return {
 
 ## Default Mappings
 
-Default keymapping for open up the _colorscheme picker_ is with `<leader> cs`. This can be change by adding the settings propperty `keymapping`
+Default keymapping for open up the _colorscheme picker_ is with `<leader> cs`. This can be change by adding the settings propperty `keymapping`.
+
+The default keymapping for changing to the default colorscheme is `<leader>CD`
+
 
 ### Insert Mode
 
@@ -62,6 +66,7 @@ Default keymapping for open up the _colorscheme picker_ is with `<leader> cs`. T
 | `<S-Tab>` | Previous colorscheme and apply the colorscheme |
 | `b`       | Toggle background between light and dark       |
 | `S`       | Save Default colorscheme                       |
+| `D`       | Changed to the Default Colorscheme             |
 
 ## Default colorscheme file
 
