@@ -5,13 +5,25 @@ local colorscheme_file = vim.fn.expand("~/.config/nvim/colorscheme")
 
 local colorscheme = {}
 
+colorscheme.change = function(selected_colorscheme)
+  vim.cmd("colorscheme " .. selected_colorscheme)
+  if vim.g.neovide then
+    local normal_highlight = vim.api.nvim_get_hl_by_name("Normal", true)
+    if normal_highlight and normal_highlight.background then
+      vim.g.neovide_background_color = string.format("%06x", normal_highlight.background)
+      .. string.format("%x", (255 * vim.g.transparency))
+    end
+  end
+end
+
+
 colorscheme.set_default_colorscheme = function()
   local file = io.open(colorscheme_file, "r")
   if file then
     current_colorscheme = file:read()
     file:close()
   end
-  vim.cmd("colorscheme " .. current_colorscheme)
+  colorscheme.change(current_colorscheme)
 end
 
 
@@ -29,18 +41,6 @@ colorscheme.setup = function(opts)
   if builtin_loaded then
     vim.keymap.set("n", keymapping, builtin.colorscheme, { desc = "[C]olor[S]cheme" })
     vim.keymap.set("n", default_colorscheme_keymapping, colorscheme.set_default_colorscheme, { desc = "Set Default Colorscheme" })
-  end
-end
-
-
-colorscheme.change = function(selected_colorscheme)
-  vim.cmd("colorscheme " .. selected_colorscheme)
-  if vim.g.neovide then
-    local normal_highlight = vim.api.nvim_get_hl_by_name("Normal", true)
-    if normal_highlight and normal_highlight.background then
-      vim.g.neovide_background_color = string.format("%06x", normal_highlight.background)
-      .. string.format("%x", (255 * vim.g.transparency))
-    end
   end
 end
 
