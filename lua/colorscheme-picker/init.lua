@@ -1,4 +1,5 @@
 local current_colorscheme = "default"
+local keymapping = "<leader>cs"
 local colorscheme_file = vim.fn.expand("~/.config/nvim/colorscheme")
 
 local colorscheme = {
@@ -9,6 +10,13 @@ local colorscheme = {
 		end
 		if opts.nvim_config then
 			colorscheme_file = opts.nvim_config .. "/colorscheme"
+		end
+		if opts.keymapping then
+			keymapping = opts.keymapping
+		end
+		local builtin_loaded, builtin = pcall(require, "telescope.builtin")
+		if builtin_loaded then
+			vim.keymap.set("n", keymapping, builtin.colorscheme, { desc = "[C]olor[S]cheme" })
 		end
 	end,
 

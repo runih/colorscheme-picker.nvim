@@ -26,6 +26,7 @@ return {
     end
     colorscheme.setup({
       default_colorscheme = "bamboo",
+      keymapping = "<leader>cs",
     })
     colorscheme.set_default_colorscheme()
   end,
@@ -33,6 +34,8 @@ return {
 ```
 
 ## Default Mappings
+
+Default keymapping for open up the _colorscheme picker_ is with `<leader> cs`. This can be change by adding the settings propperty `keymapping`
 
 ### Insert Mode
 
