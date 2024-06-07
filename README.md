@@ -36,7 +36,7 @@ return {
 
 ## Default Mappings
 
-Default keymapping for open up the _colorscheme picker_ is with `<leader> cs`. This can be change by adding the settings propperty `keymapping`.
+Default keymapping for open up the _colorscheme picker_ is with `<leader> cs`. This can be change by adding the settings property `keymapping`.
 
 The default keymapping for changing to the default colorscheme is `<leader>CD`
 
