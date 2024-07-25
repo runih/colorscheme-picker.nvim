@@ -41,14 +41,16 @@ colorscheme.setup = function(opts)
 		keymapping = opts.keymapping
 	end
 	local builtin_loaded, builtin = pcall(require, "telescope.builtin")
+	local keymap = vim.keymap
 	if builtin_loaded then
-		vim.keymap.set("n", keymapping, builtin.colorscheme, { desc = "[C]olor[S]cheme" })
-		vim.keymap.set(
+		keymap.set("n", keymapping, builtin.colorscheme, { desc = "[C]olor[S]cheme" })
+		keymap.set(
 			"n",
 			default_colorscheme_keymapping,
 			colorscheme.set_default_colorscheme,
 			{ desc = "Set Default Colorscheme" }
 		)
+		keymap.set("n", "<leader>bt", colorscheme.toggle_background, { desc = "[B]ackground [T]toggle" })
 	end
 end
 
