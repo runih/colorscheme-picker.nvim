@@ -12,10 +12,10 @@ colorscheme.change = function(selected_colorscheme)
     if
         normal_highlight
         and normal_highlight.background
-        and vim.g.neovide_background_color
+        and vim.g.neovide_transparency
         and vim.g.transparency
     then
-      vim.g.neovide_background_color = string.format("%06x", normal_highlight.background)
+      vim.g.neovide_transparency = string.format("%06x", normal_highlight.background)
           .. string.format("%x", (255 * vim.g.transparency))
     end
   end
@@ -73,8 +73,8 @@ colorscheme.toggle_background = function()
   end
   if vim.g.neovide then
     local normal_highlight = vim.api.nvim_get_hl_by_name("Normal", true)
-    if normal_highlight and normal_highlight.background and vim.g.neovide_background_color then
-      vim.g.neovide_background_color = string.format("%06x", normal_highlight.background)
+    if normal_highlight and normal_highlight.background and vim.g.neovide_transparency then
+      vim.g.neovide_transparency = string.format("%06x", normal_highlight.background)
           .. string.format("%x", (255 * vim.g.transparency))
     end
   end
