@@ -17,6 +17,8 @@ return {
   "runih/colorscheme-picker.nvim",
   dependencies = {
     "nvim-telescope/telescope.nvim",
+    -- Themes
+    'ribru17/bamboo.nvim',
   },
   config = function()
     local ok, colorscheme = pcall(require, "colorscheme-picker")
